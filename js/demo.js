@@ -1,0 +1,2 @@
+document.write("External File ");
+

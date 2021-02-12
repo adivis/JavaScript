@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Fade And Zoom</title>
+    <script type="text/javascript">
+        //fading
+        // var opacity = 0;
+        // var intervalID = 0;
+
+        // function fadeOut(){
+        //     intervalID = setInterval(hide,200);
+
+        // }
+        // function hide()
+        // {
+        //     var img = document.getElementById("img1");
+        //     opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+        //     if(opacity>0)
+        //     {
+        //         opacity = opacity-0.1;
+        //         img.style.opacity=opacity;
+        //     }
+        //     else{
+        //         clearInterval(intervalID);
+        //     }
+
+        // }
+        // function fadeIn()
+        // {
+        //     intervalID = setInterval(show,200);
+        // }
+        // function show()
+        // {
+        //     var img = document.getElementById("img1");
+        //     opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+        //     if(opacity<1)
+        //     {
+        //         opacity = opacity+0.1;
+        //         img.style.opacity=opacity;
+        //     }
+        //     else{
+        //         clearInterval(intervalID);
+        //     }
+
+        // }
+
+        //Zoom
+        var width = 100;
+        var difference = 2;
+        var interveralID = 0;
+        //document.getElementById("img1").style.width=width;
+
+        function increase() {
+            clearInterval(interveralID);
+            interveralID = setInterval(expand, 10);
+        }
+        function decrease() {
+            clearInterval(interveralID);
+            interveralID = setInterval(shrink, 10);
+        }
+        function expand() {
+            if (width < 200) {
+                width = width + difference;
+                document.getElementById("img1").style.width = width;
+                console.log(width);
+            }
+            else {
+                clearInterval(interveralID);
+            }
+
+        }
+        function shrink() {
+            if (width > 100) {
+                width = width - difference;
+                document.getElementById("img1").style.width = width;
+                console.log(width);
+            }
+            else {
+                clearInterval(interveralID);
+            }
+
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <br>
+    <br>
+    <img onmouseover="increase()" onmouseout="decrease()" id="img1" src="IMG/heart.png" width="100" />
+</body>
+
+</html>

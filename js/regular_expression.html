@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Regular Expreesion</title>
+        <script  type="text/javascript">
+                /*
+                    \d - match any digit (equal to [0-9])
+                    \w - match any word character (a-z,A-Z,0-9 & _)
+                    \s --match whitespace (eg - spaces & tabs)
+                    \t - match a tab only
+               */ 
+
+               //first code part
+        //    function validate()
+        //    {
+               
+        //         var username = document.getElementById("uname").value;
+        //         // //first way to create regular expression
+        //         // var regx = /E00/;
+        //         // //var regx = /E00/i;//case insensitive
+
+        //         // //second way to create regular expression
+        //         // regx = new RegExp("EOO","i");//(,optional)
+                
+        //         var regx = /[sdp]imple/;//simple,dimple ,pimple
+                
+        //         //var regx = /[^sdp]imple/;//simple,dimple ,pimple
+        //         //var regx  = /[a-x]00/;//using range
+        //         //var regx  = /[^a-x]00/;//to exclude range of alphabets
+        //         //var regx  = /[a-x A-X]00/;//using range if also for cease sensitive
+        //         // /[0-5]a[6-9]c/ multiple character sets
+        //         if(regx.test(username))
+        //         {
+        //             alert("Valid username");
+        //         }
+        //         else{
+        //             alert("Invalid username");
+        //             document.getElementById("lbluser").style.visibility="visible";
+        //         }
+          // }
+
+        //   //second code part
+        //   function validate()
+        //   {
+        //       var text = document.getElementById("text1").value;
+
+        //       var regx=/^[6-9]\d{9}$/;//{no. of times}^ outside points to starting & $ outside points to ending 
+        //       if(regx.test(text))
+        //       {
+        //           document.getElementById("lbltext").innerHTML="Valid";
+        //           document.getElementById("lbltext").style.visibility="visible";
+        //           document.getElementById("lbltext").style.color="green";
+
+        //       }
+        //       else{
+        //         document.getElementById("lbltext").innerHTML="Invalid";
+        //           document.getElementById("lbltext").style.visibility="visible";
+        //           document.getElementById("lbltext").style.color="red";
+        //       }
+        //   }
+
+        //third code part
+        /*
+        1              2          3          4(optional)
+        (yourname)@(domain).(extension).(.extension)
+        Eample-
+        adi.vishwakarma01@gmail.com
+        adi01@simplesnipppets.co.in
+        1.Any letters , numbers , dot and/or hyphens
+        2.Any letter , numner and/or hyphen(-)
+        3.Any letters (a-z)
+        4. a dot(.) any letter
+        
+        */
+        function validate()
+          {
+              var text = document.getElementById("text1").value;
+
+              var regx=/^([a-z A-Z 0-9 \. -]+)@([a-z A-Z 0-9  -]+).([a-z]{2,20})(.[a-z]{2,20})?$/;//+ is for atleast 1 time repeat ? is to make it optional
+              if(regx.test(text))
+              {
+                  document.getElementById("lbltext").innerHTML="Valid";
+                  document.getElementById("lbltext").style.visibility="visible";
+                  document.getElementById("lbltext").style.color="green";
+
+              }
+              else{
+                document.getElementById("lbltext").innerHTML="Invalid";
+                  document.getElementById("lbltext").style.visibility="visible";
+                  document.getElementById("lbltext").style.color="red";
+              }
+          }
+        </script>
+    </head>
+    <body>
+
+       <!-- First code part
+            <form action="message.html">
+           <input id="uname" placeholder="username" type="text"/>
+           <br>
+           <label id="lbluser" style="color:red;visibility: hidden;">"Invalid"</label>
+           <br>
+           <button onclick="validate()" type="button">Submit</button>
+       </form> -->
+
+         <!-- //second code part
+         <form>
+             <input id="text1" placeholder="Cellphone" type="text"/><br>
+             <label id="lbltext" style="color:red;visibility:hidden">Invalid</label>
+             <br>
+             <button onclick="validate()" type="button">Submit</button>
+         </form> -->
+
+         <!-- //third code part -->
+         <form>
+            <input id="text1" placeholder="Email" type="text"/><br>
+            <label id="lbltext" style="color:red;visibility:hidden">Invalid</label>
+            <br>
+            <button onclick="validate()" type="button">Submit</button>
+        </form>
+    </body>
+</html>

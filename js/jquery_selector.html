@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+    jQuery selectors allow u to select and manipulate HTML element(s).
+    jQuery selectors are used to "find" (or select) HTML elem based
+    on their name,id,classes , types , attributes , values of attributes
+    and much more . it's based on the existing CSS selectors and in addition ,
+     it has some own custom selectors.
+-->
+<html lang="en">
+<head>
+    
+    <title>jQuery Selectors</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- <h2 id="firsth" class="myheading">Selectors up jQuery</h2>
+    <h2 class="myheading">Selectors up jQuery</h2> -->
+    <h2>Selectors up jQuery</h2>
+    <p>This is  paragraph not  inside division</p>
+    
+    <div  id="fisrtdiv" class="mydiv">
+        <p>This is first  paragraph of first division</p>
+        <p>This is second  paragraph of first division</p>
+    </div>
+    <div id="seconddiv"  class="mydiv">
+        <p>This is third  paragraph of second division</p>
+    </div>
+    <div id="thirddiv" class="mydiv">
+        <ul>
+            <li>
+                List item 1
+            </li>
+            <li>
+                List item 2
+            </li>
+            <li>
+                List item 3
+            </li>
+            <li>
+                List item 4
+            </li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>
+                List item 1
+            </li>
+            <li>
+                List item 2
+            </li>
+            <li>
+                List item 3
+            </li>
+            <li>
+                List item 4
+            </li>
+        </ul>
+    </div>
+    <button onclick="fn1()" id="btn1">Click Me</button>
+
+</body>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script>
+    function fn1()
+    {
+        // $("#fisrtdiv,#seconddiv").fadeToggle();
+        // $("#fisrtdiv,p").fadeToggle();
+        // $("#fisrtdiv,p,.mydiv").fadeToggle();
+    //    $("div > p").fadeToggle();// $("div  p").fadeToggle();
+            // $("p:first").fadeToggle();
+         //   $(".mydiv:first").fadeToggle();
+        //  $(".mydiv:even").fadeToggle();
+        $("li:even").fadeToggle();
+    }
+</script>
+</html>

@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function fn1(){
+                var rd1 = document.getElementById("rd1");
+                var rd2 = document.getElementById("rd2");
+                if(rd1.checked==true)
+                    alert("The channel selected: "+rd1.value);
+                else if(rd2.checked==true)
+                    alert("The channel selected: "+rd2.value);
+                else
+                    alert("No Channel slected");
+            }
+        </script>
+    </head>
+    <body>
+
+        <input id="rd1" name="grp1" type="radio" value="SS">SS</input>
+        <br>
+        <input id="rd2" name="grp1" type="radio" value="Aditi">Aditi</input>
+        <br>
+        <button onclick="fn1()">Click ME</button>
+    </body>
+</html>

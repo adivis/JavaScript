@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script type="text/javascript">
+           function changeStyling()
+           {
+               var element = document.getElementsByClassName("mypara");
+               for(var x=0;x<element.length;x++)
+               {
+                   element[x].style.color=  "red";
+                   element[x].style.fontStyle=  "italic";
+               }
+           }
+           function setNewImage()
+           {
+                document.getElementById("img1").src="IMG/BTS_3.jpg";
+           }
+           function setOldImage()
+           {
+            document.getElementById("img1").src="IMG/BTS_2.jpg";
+           }
+        </script>
+    </head>
+    <body>
+       <p class="mypara">This is paragraph 1</p>
+       <p >This is paragraph 2</p>
+       <p class="mypara">This is paragraph 3</p>
+       <p>This is paragraph 4</p>
+       <p class="mypara">This is paragraph 5</p>
+       <a class="mypara">This is an anchor tag</a>
+        <button onclick="changeStyling()">Click Me</button>
+        <br>
+         <!-- <img src="IMG/BTS_1.jpg"> -->
+         <img id="img1" onmouseover="setNewImage()" onmouseout="setOldImage()" src="IMG/BTS_2.jpg">
+         <!-- <img src="IMG/BTS_3.jpg"> -->
+    </body>
+</html>

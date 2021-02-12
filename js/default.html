@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Variable & Datatype
+            Operators
+        </title>
+        <script type="text/javascript">
+           
+           //JS is loosely typed
+           //JS is dynamically typed
+           
+            // var num = 16;
+            // var Name = "Aditi Vishwakarma";
+            // var flag = true;//boolean
+            // alert(num);
+            // num="Aditi"
+            // document.write(num);
+
+
+            // var a = 3;
+            // var b =3;
+            // var result = "Aditi" + a + b;//left to right
+            // document.write("<h1>Result is : "+result+"</h1>")
+            // var result = a + b + "Aditi" ;//left to right
+            // document.write("<h1>Result is : "+result+"</h1>")
+
+            // var x = 3;
+            // if(x%2==0)
+            // {
+            //     document.write("Even number");
+
+            // }
+            // else{
+            //     document.write("Old number");
+            // }
+                // var day  = 11;
+                // switch(day)
+                // {
+                //     case 1:
+                //         document.write("Sunday");
+                //         break;
+                //     case 2:
+                //         document.write("Tuesday");
+                //         break;
+                //     case 3:
+                //         document.write("Wednesday");
+                //         break;
+                //     case 4:
+                //         document.write("Thur");
+                //         break;
+                //     case 5:
+                //         document.write("Fri");
+                //         break;
+                //     case 6:
+                //         document.write("Sat");
+                //         break;
+                //     default:
+                //         document.write("Wrong input");
+
+                // for(var i=0;i<10;i++)
+                //   {
+                //       document.write(i+"<br>");
+                     
+                //   }
+
+                //FUNCTIONS
+
+
+                // function add2Num(a,b)
+                // {
+                    
+                //     var tot=a+b;
+                //     document.write("<h1> The total is :"+tot+"</h1>");  
+                // }  
+                // function addNum(a,b)
+                // {
+                    
+                //     var tot=a+b;//local variable
+                //     return tot;
+                //     document.write("<h1> The total is :"+tot+"</h1>");  
+                // }  
+                // add2Num(1,2);
+                // result = addNum("Aditi","Vishwakrama");//global variable
+                // document.write("<h1> The result is :"+result+"</h1>");
+                // var car1="Audi";
+                // var car2="Mercedes";
+                // var car3="Ford";
+                // //          0          1          2
+                // var cars= ["BMW" , "Mercedes" , "Audi"];
+                // var arr1 = new Array("Aditi","Priya","Sahu");
+
+                // // var arr1;
+                // // arr1 = new Array("Aditi","Priya","Sahu");
+                
+                // cars.push("Ford");
+                // document.write("<h3>"+cars[2]+"</h3>");
+                // for(var i=0;i<cars.length;i++)
+                // document.write("<h3>"+cars[i]+"</h3>");
+                // for(var i=0;i<3;i++)
+                // document.write("<h3>"+arr1[i]+"</h3>");
+                // document.write("<h3>"+cars[3]+"</h3>");
+
+                    //objects
+
+                    //first way of creating object
+                    var Car = {
+                         car_brand : "Tesla",
+                        car_model : "Model 3",
+                        price : 350000,
+
+                        teslaAutoPilot : function()
+                        {
+                            return "<h2>This is car has Auto pilot</h2>";
+                        }
+                    }
+                    
+                    document.write("<h2>"+Car.teslaAutoPilot()+"</h2>");
+                    // 100 more line of code
+                    Car.fuelType="Electric";
+                    document.write("<h2>"+Car.fuelType+"</h2>");
+                    delete Car.car_brand;
+                    document.write("<h2>"+Car.car_brand+"</h2>");
+                    Car.price="350000";//to change int into String type
+                    //Second way
+                    // function Cars(car_brand,car_model,price)
+                    // {
+                    //     this.car_brand = car_brand;
+                    //     this.car_model = car_model;
+                    //     this.price = price;
+                    //     this.teslaAutoPilot = function()
+                    //     {
+                    //         document.write("<h2>This is car has Auto pilot</h2>");
+                    //     }
+                    // }
+                  
+                    // var c1 = new Cars("Tesla","Model 3",35000);
+                    // var c2 = new Cars("Audi","Model 1",35000);
+                    // cl.teslaAutoPilot();
+                    // c2.teslaAutoPilot(); 
+
+
+                    var str1 = new String();//object
+                    document.write(typeof(str1));
+                    var str = "Aditi";
+                    document.write(typeof(str));
+
+        </script>
+       
+    </head>
+    <body>
+            
+    </body>
+</html>

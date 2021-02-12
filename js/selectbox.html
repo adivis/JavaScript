@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function fn1()
+            {
+                var select = document.getElementById("selectbox");
+                alert(select.options[select.selectedIndex].value);
+            }
+        </script>
+    </head>
+    <body>
+        <select id="selectbox">
+            <option value="Coding">Coding</option>
+            <option value="BTS">BTS</option>
+            <option value="Sleep">Sleep</option>
+        </select>
+        <br>
+        <button onclick="fn1()">Click ME</button>
+    </body>
+</html>
